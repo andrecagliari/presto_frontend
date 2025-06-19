@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aulabzon</title>
+
+    <!-- Configurazione Tailwind -->
+    <script>
+      tailwind = { config: { darkMode: 'class' } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS locale -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg-cover bg-fixed bg-center text-white" style="background-image: url('./img/city-bokeh.webp')">
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black/70 backdrop-blur-lg z-50 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-400">Aulabzon</h1>
+        <div class="flex gap-3 items-center">
+          <button id="toggleDark" class="text-white"><i class="fas fa-moon"></i></button>
+          <button id="showFavorites" class="text-white relative"><i class="fas fa-heart text-red-500"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Filtri -->
+    <div class="pt-24 px-4 max-w-7xl mx-auto space-y-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <select id="categoryFilter" class="text-black rounded px-3 py-1 w-full">
+          <option value="">Tutte le categorie</option>
+        </select>
+        <div class="flex gap-2 items-center">
+          <input type="range" id="priceRange" class="w-full" />
+          <input type="number" id="priceInput" class="w-24 text-black rounded px-2 py-1" />
+        </div>
+        <select id="starsFilter" class="text-black rounded px-3 py-1 w-full">
+          <option value="0">Tutte le recensioni</option>
+          <option value="1">1+ stelle</option>
+          <option value="2">2+ stelle</option>
+          <option value="3">3+ stelle</option>
+          <option value="4">4+ stelle</option>
+          <option value="5">5 stelle</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Cerca..." class="text-black rounded px-3 py-1 w-full" />
+      </div>
+    </div>
+
+    <!-- Annunci -->
+    <section id="annunciContainer" class="pt-8 px-4 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+
+    <!-- Sezione Preferiti -->
+    <section id="favsSection" class="hidden pt-12 px-4 max-w-7xl mx-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">I tuoi preferiti</h2>
+        <button id="closeFavorites" class="text-sm px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-md transition">
+          Chiudi Preferiti
+        </button>
+      </div>
+      <div id="favsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- Modal Dettagli -->
+    <div id="modalOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center hidden z-50">
+      <div class="bg-white text-black max-w-lg p-6 rounded-lg shadow-lg relative dark:bg-gray-900 dark:text-white">
+        <button id="closeModal" class="absolute top-2 right-3 text-xl">&times;</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./main.js"></script>
+  </body>
+</html>
