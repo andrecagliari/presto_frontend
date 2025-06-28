@@ -12,6 +12,11 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   --red: rgb(235,33,46);
 }
 
+body {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
 .bg-yellow {
   background-color: var(--yellow);
 }
@@ -54,4 +59,136 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 
 .logo {
   width: 50px;
+}
+
+.logo2 {
+  width: 100px;
+  transition: 0.5s ease;
+}
+
+/* Header */
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5)), url(./media/iperspazio.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-custom {
+  color: var(--yellow);
+  background-color: var(--black);
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  margin: 0px 15px;
+  padding: 20px 30px;
+  transition: all 0.5s ease;
+}
+.btn-custom:hover {
+  color: var(--black);
+  background-color: var(--yellow);
+  box-shadow: 0px 0px 20px rgba(255, 232, 31, 0.5);
+  transform: scale(1.2);
+}
+
+/* Positioned */
+.positioned {
+  position: relative;
+  top: -150px;
+}
+
+.col-custom {
+  padding: 10px;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  transition: 0.5s ease;
+  color: var(--black);
+}
+.col-custom:hover {
+  transform: scale(1.1);
+  background-color: var(--black);
+  color: var(--red);
+  border: 2px solid var(--yellow);
+  box-shadow: 0px 0px 20px rgba(255, 232, 31, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+  .positioned {
+    position: static;
+  }
+  
+}
+
+/* Numeri incrementali */
+
+.numeri {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+/* Swiper */
+
+.swiper {
+  background-image: url('./media/starwars-bokeh.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.card-review {
+  position: relative;
+  background-image: url('./media/starwars-bokeh.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+  border: 2px solid var(--yellow);
+  border-radius: 20px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+}
+
+.card-review::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.card-review > * {
+  position: relative;
+  z-index: 1;
+  color: var(--yellow);
+  text-shadow: 0 0 8px black;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* sfondo scuro semi-trasparente */
+  z-index: 0;
+  border-radius: 20px;
+}
+.swiper .swiper-slide,
+.swiper .card-review {
+  position: relative;
+  z-index: 1;
 }

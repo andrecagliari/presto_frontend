@@ -4,52 +4,117 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presto</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Font Awesome CDN (solid, regular, brands) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Custom CSS -->
   <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-  
-  <!-- Navbar  -->
-   <nav id="navbar" class="navbar navbar-expand-md bg-black fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img id="logoNavbar" src="./media/LogoSWgiallo.png" alt="Logo del sito" class="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Annunci</a>
-        </li>
-                </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Chi siamo</a>
-        </li>
-      </ul>
-    </div>
-    <div class="logo"></div>
-  </div>
-</nav>
-   <!-- Navbar end -->
 
-   <div style="height: 4000px;"></div>
-  
-  
-  
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-md bg-black fixed-top">
+    <div id="collapse" class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img id="logoNavbar" src="./media/LogoSWgiallo.png" alt="Logo del sito" class="logo">
+      </a>
+      <img id="spadalaser" src="./media/spadanavbarOriz-giallo.png" class="img-fluid logo2 d-md-none" alt="Spada Laser" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Annunci</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
+        </ul>
+        <div class="logo"></div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- Header -->
+  <header class="container-fluid">
+    <div class="row vh-100 align-items-center header">
+      <div class="col-12 text-center">
+        <h1 class="text-yellow display-1">Presto.it</h1>
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-custom">Scopri di più</button>
+          <button class="btn btn-custom">Registrati</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Positioned Section -->
+  <section class="container positioned py-5">
+    <div class="row justify-content-center g-4">
+      <div class="col-10 col-md-4 bg-yellow text-center p-4 col-custom">
+        <i class="fa-brands fa-jedi-order fa-3x mb-3"></i>
+        <h3>Ordine Jedi</h3>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore, quasi maiores.</p>
+      </div>
+      <div class="col-10 col-md-4 bg-yellow text-center p-4 col-custom">
+        <i class="fa-brands fa-galactic-senate fa-3x mb-3"></i>
+        <h3>Senato Galattico</h3>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem repellat, tenetur, dicta.</p>
+      </div>
+      <div class="col-10 col-md-4 bg-yellow text-center p-4 col-custom">
+        <i class="fa-brands fa-galactic-republic fa-3x mb-3"></i>
+        <h3>Repubblica Galattica</h3>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos voluptatibus quas ut.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numeri incrementali -->
+  <section class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-md-6">
+        <img src="./media/DarthMaul.jpeg" alt="Darth Maul" class="img-fluid rounded">
+      </div>
+      <div class="col-12 col-md-6">
+        <h3 class="text-center mb-4">Un po' di numeri</h3>
+        <p><span class="numeri text-yellow" id="firstNumber">0</span> <span class="text-yellow">annunci pubblicati</span></p>
+        <p><span class="numeri text-yellow" id="secondNumber">0</span> <span class="text-yellow">utenti registrati</span></p>
+        <p><span class="numeri text-yellow" id="thirdNumber">0</span> <span class="text-yellow">annunci attivi</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recensioni -->
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Slides dinamiche generate da JS -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- Custom JS -->
   <script src="./main.js"></script>
+
 </body>
 </html>
