@@ -138,6 +138,10 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: true,
   slidesPerView: "auto",
   loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -152,3 +156,5 @@ const swiper = new Swiper('.swiper', {
     el: ".swiper-scrollbar",
   },
 });
+
+

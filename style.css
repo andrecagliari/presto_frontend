@@ -1,15 +1,31 @@
-*{
-font-family: "Lato", sans-serif;
+/* Font generali */
+* {
+  font-family: "Lato", sans-serif;
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   font-family: "Orbitron", sans-serif;
 }
 
-:root{
+/* Variabili */
+:root {
   --yellow: rgb(255, 232, 31);
   --black: rgb(23, 23, 23);
-  --red: rgb(235,33,46);
+  --red: rgb(235, 33, 46);
+}
+
+/* Sfondo e base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5)), url('./media/iperspazio.png');
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
 }
 
 body {
@@ -17,29 +33,31 @@ body {
   color: var(--yellow);
 }
 
-.bg-yellow {
-  background-color: var(--yellow);
+/* Modalità scura automatica */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--black);
+    color: var(--yellow);
+  }
+
+  .btn-custom {
+    background-color: var(--black);
+    color: var(--yellow);
+  }
+
+  .card-review {
+    background: rgba(0, 0, 0, 0.6);
+  }
 }
 
-.bg-black {
-  background-color: var(--black);
-}
+/* Classi colore */
+.bg-yellow { background-color: var(--yellow); }
+.bg-black { background-color: var(--black); }
+.bg-red { background-color: var(--red); }
 
-.bg-red {
-  background-color: var(--red);
-}
-
-.text-yellow {
-  color: var(--yellow);
-}
-
-.text-black {
-  color: var(--black);
-}
-
-.text-red {
-  color: var(--red);
-}
+.text-yellow { color: var(--yellow); }
+.text-black { color: var(--black); }
+.text-red { color: var(--red); }
 
 /* Navbar */
 .navbar {
@@ -57,6 +75,7 @@ body {
   text-shadow: 2px 2px 5px var(--red), -2px -2px 5px var(--red);
 }
 
+/* Logo */
 .logo {
   width: 50px;
 }
@@ -66,14 +85,7 @@ body {
   transition: 0.5s ease;
 }
 
-/* Header */
-.header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5)), url(./media/iperspazio.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+/* Bottoni personalizzati */
 .btn-custom {
   color: var(--yellow);
   background-color: var(--black);
@@ -83,6 +95,7 @@ body {
   padding: 20px 30px;
   transition: all 0.5s ease;
 }
+
 .btn-custom:hover {
   color: var(--black);
   background-color: var(--yellow);
@@ -90,12 +103,13 @@ body {
   transform: scale(1.2);
 }
 
-/* Positioned */
+/* Posizionamento */
 .positioned {
   position: relative;
   top: -150px;
 }
 
+/* Colonne interattive */
 .col-custom {
   padding: 10px;
   border: 2px solid var(--black);
@@ -103,6 +117,7 @@ body {
   transition: 0.5s ease;
   color: var(--black);
 }
+
 .col-custom:hover {
   transform: scale(1.1);
   background-color: var(--black);
@@ -111,39 +126,56 @@ body {
   box-shadow: 0px 0px 20px rgba(255, 232, 31, 0.5);
 }
 
+/* Responsive */
 @media screen and (max-width: 600px) {
   .positioned {
     position: static;
   }
-  
 }
 
 /* Numeri incrementali */
-
 .numeri {
   font-size: 2.5rem;
   font-weight: 900;
 }
 
 /* Swiper */
-
 .swiper {
-  background-image: url('./media/starwars-bokeh.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   padding-top: 50px;
   padding-bottom: 50px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
 }
 
+.swiper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-slide,
+.swiper .card-review {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card recensione */
 .card-review {
   position: relative;
-  background-image: url('./media/starwars-bokeh.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
   padding: 30px;
   border: 2px solid var(--yellow);
   border-radius: 20px;
@@ -154,8 +186,13 @@ body {
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 232, 31, 0.4);
+  transition: all 0.4s ease;
+}
+
+.card-review:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 232, 31, 0.5);
 }
 
 .card-review::before {
@@ -164,6 +201,7 @@ body {
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 0;
+  border-radius: 20px;
 }
 
 .card-review > * {
@@ -173,22 +211,28 @@ body {
   text-shadow: 0 0 8px black;
 }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Immagine Darth Maul con cornice vetro */
+.img-wrapper {
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
 }
 
-.swiper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* sfondo scuro semi-trasparente */
-  z-index: 0;
-  border-radius: 20px;
+.img-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
 }
-.swiper .swiper-slide,
-.swiper .card-review {
-  position: relative;
-  z-index: 1;
+
+.img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: brightness(1.1) contrast(1.1);
+  transition: all 0.3s ease-in-out;
 }
