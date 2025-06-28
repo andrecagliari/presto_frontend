@@ -1,56 +1,57 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+*{
+font-family: "Lato", sans-serif;
 }
 
-/* Modal Overlay */
-#modalOverlay.show {
-  display: flex;
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  font-family: "Orbitron", sans-serif;
 }
 
-/* Card */
-.card {
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.02);
+:root{
+  --yellow: rgb(255, 232, 31);
+  --black: rgb(23, 23, 23);
+  --red: rgb(235,33,46);
 }
 
-/* Favorite Heart */
-.favorite-btn {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.favorite-btn.active i {
-  animation: pop 0.3s ease;
+.bg-yellow {
+  background-color: var(--yellow);
 }
 
-/* Animazione cuore */
-@keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.6);
-  }
-  100% {
-    transform: scale(1);
-  }
+.bg-black {
+  background-color: var(--black);
 }
 
-/* Navbar shadow fix per leggibilità */
-nav {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+.bg-red {
+  background-color: var(--red);
 }
 
-/* Fix elementi in dark mode */
-input[type="text"],
-input[type="number"],
-select {
-  background-color: white;
-  color: black;
+.text-yellow {
+  color: var(--yellow);
 }
 
-/* Range Slider colore */
-input[type="range"] {
-  accent-color: #60a5fa;
+.text-black {
+  color: var(--black);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+/* Navbar */
+.navbar {
+  height: 140px;
+  transition: background-color 0.4s ease;
+}
+
+.nav-link {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: white !important;
+  text-shadow: 2px 2px 5px var(--red), -2px -2px 5px var(--red);
+}
+
+.logo {
+  width: 50px;
 }
