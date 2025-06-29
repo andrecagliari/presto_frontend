@@ -3,7 +3,7 @@
     "id": 1,
     "titolo": "Huawei X5",
     "categoria": "Elettronica",
-    "prezzo": 120.12,
+    "prezzo": 120,
     "descrizione": "Smartphone compatto con buona autonomia e prestazioni per l’uso quotidiano.",
     "img": "./img/huawei-x5.webp",
     "recensioni": [
@@ -16,7 +16,7 @@
     "id": 2,
     "titolo": "Fiat 500",
     "categoria": "Motori",
-    "prezzo": 2000.32,
+    "prezzo": 2000,
     "descrizione": "Citycar iconica, ottima per muoversi in città con stile e consumi ridotti.",
     "img": "./img/fiat-500.webp",
     "recensioni": [
@@ -29,7 +29,7 @@
     "id": 3,
     "titolo": "Mazza da Baseball",
     "categoria": "Sport",
-    "prezzo": 20.15,
+    "prezzo": 20,
     "descrizione": "Mazza da baseball in alluminio, ideale per principianti ed esperti.",
     "img": "./img/mazza da baseball.webp",
     "recensioni": [
@@ -42,7 +42,7 @@
     "id": 4,
     "titolo": "Bilocale",
     "categoria": "Immobili",
-    "prezzo": 30000.54,
+    "prezzo": 30000,
     "descrizione": "Appartamento bilocale ideale per giovani coppie o investimento.",
     "img": "./img/bilocale.jpg",
     "recensioni": [
@@ -55,7 +55,7 @@
     "id": 5,
     "titolo": "Felpa usata",
     "categoria": "Abbigliamento",
-    "prezzo": 10.42,
+    "prezzo": 10,
     "descrizione": "Felpa comoda e calda, in buone condizioni.",
     "img": "./img/felpausata.jpg",
     "recensioni": [
@@ -68,7 +68,7 @@
     "id": 6,
     "titolo": "Divani due posti",
     "categoria": "Arredamento",
-    "prezzo": 400.64,
+    "prezzo": 400,
     "descrizione": "Divano a due posti, stile moderno, rivestimento sfoderabile.",
     "img": "./img/divanodueposti.webp",
     "recensioni": [
@@ -81,7 +81,7 @@
     "id": 7,
     "titolo": "Pala",
     "categoria": "Giardinaggio",
-    "prezzo": 30.45,
+    "prezzo": 30,
     "descrizione": "Pala in metallo per giardino, ideale per lavori di scavo o terra.",
     "img": "./img/palametallo.webp",
     "recensioni": [
@@ -94,7 +94,7 @@
     "id": 8,
     "titolo": "Master of Pupo",
     "categoria": "Musica",
-    "prezzo": 15.64,
+    "prezzo": 15,
     "descrizione": "Raccolta dei grandi successi di Pupo in edizione speciale.",
     "img": "./img/pupo.jpg",
     "recensioni": [
@@ -107,7 +107,7 @@
     "id": 9,
     "titolo": "TV Samsung",
     "categoria": "Elettronica",
-    "prezzo": 230.42,
+    "prezzo": 230,
     "descrizione": "TV LED 32” Samsung con HDMI e porta USB. Qualità eccellente.",
     "img": "./img/tvled32.webp",
     "recensioni": [
@@ -120,7 +120,7 @@
     "id": 10,
     "titolo": "Ford Puma",
     "categoria": "Motori",
-    "prezzo": 25000.02,
+    "prezzo": 25000,
     "descrizione": "SUV compatto e sportivo, perfetto per la guida urbana.",
     "img": "./img/fordpuma.jpg",
     "recensioni": [
@@ -133,7 +133,7 @@
     "id": 11,
     "titolo": "Pallone da calcio",
     "categoria": "Sport",
-    "prezzo": 30.12,
+    "prezzo": 30,
     "descrizione": "Pallone professionale cucito a mano, ideale per allenamenti o partite.",
     "img": "./img/pallonecalcio.webp",
     "recensioni": [
@@ -159,7 +159,7 @@
     "id": 13,
     "titolo": "Sciarpa scolorita",
     "categoria": "Abbigliamento",
-    "prezzo": 5.23,
+    "prezzo": 5,
     "descrizione": "Sciarpa in lana scolorita, ideale per chi ama il vintage.",
     "img": "./img/sciarpa.webp",
     "recensioni": [
@@ -172,7 +172,7 @@
     "id": 14,
     "titolo": "Lampada",
     "categoria": "Arredamento",
-    "prezzo": 70.65,
+    "prezzo": 70,
     "descrizione": "Lampada da tavolo in stile scandinavo con paralume in lino.",
     "img": "./img/lampadascandinava.webp",
     "recensioni": [
@@ -185,7 +185,7 @@
     "id": 15,
     "titolo": "Concime",
     "categoria": "Giardinaggio",
-    "prezzo": 2.45,
+    "prezzo": 8,
     "descrizione": "Concime organico universale per piante da interno ed esterno.",
     "img": "./img/concime.jpg",
     "recensioni": [
@@ -198,7 +198,7 @@
     "id": 16,
     "titolo": "Basso nuovo",
     "categoria": "Musica",
-    "prezzo": 300.62,
+    "prezzo": 300,
     "descrizione": "Basso elettrico a 4 corde, ideale per principianti e studenti.",
     "img": "./img/bassonuovo.webp",
     "recensioni": [
@@ -211,7 +211,7 @@
     "id": 17,
     "titolo": "Cuffie Sony",
     "categoria": "Elettronica",
-    "prezzo": 120.65,
+    "prezzo": 120,
     "descrizione": "Cuffie con cancellazione attiva del rumore e suono bilanciato.",
     "img": "./img/cuffiesony.webp",
     "recensioni": [
@@ -224,7 +224,7 @@
     "id": 18,
     "titolo": "Ducati Monster",
     "categoria": "Motori",
-    "prezzo": 12000.13,
+    "prezzo": 12000,
     "descrizione": "Moto sportiva Ducati Monster, perfetta per chi ama la guida dinamica.",
     "img": "./img/ducatimonster.jpg",
     "recensioni": [
@@ -237,7 +237,7 @@
     "id": 19,
     "titolo": "Pattini",
     "categoria": "Sport",
-    "prezzo": 90.64,
+    "prezzo": 90,
     "descrizione": "Pattini in linea professionali con cuscinetti ABEC-7.",
     "img": "./img/pattinilinea.webp",
     "recensioni": [
@@ -250,7 +250,7 @@
     "id": 20,
     "titolo": "Guanti invernali",
     "categoria": "Abbigliamento",
-    "prezzo": 22.04,
+    "prezzo": 22,
     "descrizione": "Guanti in pile con interno termico e touch per smartphone.",
     "img": "./img/guantipile.jpg",
     "recensioni": [
@@ -263,7 +263,7 @@
     "id": 21,
     "titolo": "Scrivania in vetro",
     "categoria": "Arredamento",
-    "prezzo": 600.63,
+    "prezzo": 600,
     "descrizione": "Scrivania elegante con piano in vetro temperato e struttura in metallo.",
     "img": "./img/scrivaniavetro.webp",
     "recensioni": [
@@ -276,7 +276,7 @@
     "id": 22,
     "titolo": "Secchio",
     "categoria": "Giardinaggio",
-    "prezzo": 30.43,
+    "prezzo": 30,
     "descrizione": "Secchio da giardino con manico rinforzato, capacità 10 litri.",
     "img": "./img/secchiogiardino.jpg",
     "recensioni": [
@@ -289,7 +289,7 @@
     "id": 23,
     "titolo": "Compilation Pupo",
     "categoria": "Musica",
-    "prezzo": 9.93,
+    "prezzo": 9,
     "descrizione": "Raccolta inedita dei brani più amati di Pupo.",
     "img": "./img/pupocompilation.jpg",
     "recensioni": [
@@ -302,7 +302,7 @@
     "id": 24,
     "titolo": "Auricolari Sennheiser",
     "categoria": "Elettronica",
-    "prezzo": 120.93,
+    "prezzo": 120,
     "descrizione": "Auricolari in-ear Sennheiser con audio ad alta definizione.",
     "img": "./img/auricolarisenn.webp",
     "recensioni": [
@@ -315,7 +315,7 @@
     "id": 25,
     "titolo": "Fiat 300",
     "categoria": "Motori",
-    "prezzo": 2560.42,
+    "prezzo": 2560,
     "descrizione": "Auto compatta ideale per la città, motore affidabile.",
     "img": "./img/trattore.jpg",
     "recensioni": [
@@ -328,7 +328,7 @@
     "id": 26,
     "titolo": "Set mazze da golf",
     "categoria": "Sport",
-    "prezzo": 4320.43,
+    "prezzo": 4320,
     "descrizione": "Set completo per golfisti con sacca, ferri e driver.",
     "img": "./img/mazzegolf.webp",
     "recensioni": [
@@ -341,7 +341,7 @@
     "id": 27,
     "titolo": "Posto auto",
     "categoria": "Immobili",
-    "prezzo": 2200.63,
+    "prezzo": 2200,
     "descrizione": "Posto auto scoperto in cortile recintato, zona centrale.",
     "img": "./img/postoauto.jpg",
     "recensioni": [
@@ -354,7 +354,7 @@
     "id": 28,
     "titolo": "Zaino Decathlon",
     "categoria": "Abbigliamento",
-    "prezzo": 55.55,
+    "prezzo": 55,
     "descrizione": "Zaino sportivo Decathlon con scomparti multipli e schienale imbottito.",
     "img": "./img/zainodeca.webp",
     "recensioni": [
@@ -367,7 +367,7 @@
     "id": 29,
     "titolo": "Comodino",
     "categoria": "Arredamento",
-    "prezzo": 210.12,
+    "prezzo": 210,
     "descrizione": "Comodino in legno massello con cassetto e ripiano aperto.",
     "img": "./img/comodino.webp",
     "recensioni": [
@@ -380,7 +380,7 @@
     "id": 30,
     "titolo": "Rastrello",
     "categoria": "Giardinaggio",
-    "prezzo": 5.62,
+    "prezzo": 5,
     "descrizione": "Rastrello in acciaio con manico in legno, largo 30cm.",
     "img": "./img/rastrello.jpg",
     "recensioni": [
