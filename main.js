@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
     navbar.classList.replace('bg-black', 'bg-yellow');
     collapse.classList.replace('bg-black', 'bg-yellow');
     navbar.style.height = '70px';
-    links.forEach(link => link.style.color = 'var(--black)');
+    links.forEach(link => link.style.color = 'var(--red)');
     logoNavbar.src = './media/LogoSWnero.png';
     spadaLaser.src = './media/spadanavbarOriz-nera.png';
   } else {
