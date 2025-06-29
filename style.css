@@ -18,7 +18,14 @@
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
   font-family: "Orbitron", sans-serif;
 }
 
@@ -35,9 +42,15 @@ body {
   transition: background 0.5s, color 0.5s;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5)), url('./media/iperspazio.png');
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      transparent,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./media/iperspazio.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,13 +60,25 @@ html, body {
 /* =======================
         CLASSI COLORI
 ======================= */
-.bg-yellow { background-color: var(--yellow); }
-.bg-black { background-color: var(--black); }
-.bg-red { background-color: var(--red); }
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.bg-black {
+  background-color: var(--black);
+}
+.bg-red {
+  background-color: var(--red);
+}
 
-.text-yellow { color: var(--yellow); }
-.text-black { color: var(--black); }
-.text-red { color: var(--red); }
+.text-yellow {
+  color: var(--yellow);
+}
+.text-black {
+  color: var(--black);
+}
+.text-red {
+  color: var(--red);
+}
 
 /* =======================
         NAVBAR
@@ -201,7 +226,7 @@ html, body {
 
 .card-review {
   position: relative;
-  background: url('./media/starwars-bokeh.jpg') center/cover no-repeat;
+  background: url("./media/starwars-bokeh.jpg") center/cover no-repeat;
   backdrop-filter: blur(4px);
   padding: 30px;
   border: 2px solid var(--yellow);
@@ -251,7 +276,8 @@ body.dark .card-review i {
 /* =======================
     FORM CONTATTI
 ======================= */
-form input, form textarea {
+form input,
+form textarea {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid var(--yellow);
   color: var(--yellow);
@@ -260,7 +286,8 @@ form input, form textarea {
   transition: 0.3s ease;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
   outline: none;
   border-color: var(--red);
   background-color: rgba(255, 255, 255, 0.2);
@@ -346,4 +373,27 @@ footer a:hover {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+}
+
+/* =======================
+      PAGINA ANNUNCI
+======================= */
+
+.accordion-item,
+.accordion-button {
+  background-color: var(--black);
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--red);
+  color: var(--black);
+  box-shadow: 0 0 10px var(--yellow);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 10px var(--red);
 }
