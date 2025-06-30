@@ -1,12 +1,13 @@
-console.log("Script Chi Siamo caricato");
+console.log("✅ Script Chi Siamo caricato");
 
-// NAVBAR DINAMICA (colore e dimensione su scroll)
+// ================== NAVBAR DINAMICA ==================
 const navbar = document.querySelector("#navbar");
 const links = document.querySelectorAll(".nav-link");
 const logoNavbar = document.querySelector("#logoNavbar");
 const spadaLaser = document.querySelector("#spadalaser");
 const collapse = document.querySelector("#collapse");
 
+// Aggiorna stile navbar su scroll
 window.addEventListener("scroll", () => {
   let scrolled = window.scrollY;
 
@@ -27,15 +28,18 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// DARK MODE TOGGLE
+// ================== DARK MODE TOGGLE ==================
 const darkModeToggle = document.getElementById("darkModeToggle");
 
+// Applica modalità scura se già abilitata
 if (localStorage.getItem("dark-mode") === "enabled") {
   document.body.classList.add("dark");
 }
 
+// Attiva/disattiva modalità scura con toggle
 darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("dark-mode", "enabled");
   } else {
@@ -43,13 +47,15 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
-// BACK TO TOP
+// ================== BOTTONE "TORNA SU" ==================
 const backToTop = document.getElementById("backToTop");
 
+// Mostra bottone se scroll > 300px
 window.addEventListener("scroll", () => {
   backToTop.style.display = window.scrollY > 300 ? "block" : "none";
 });
 
+// Scorri in alto con animazione
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });

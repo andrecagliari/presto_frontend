@@ -1,12 +1,13 @@
-console.log(`Script di gestione main caricato`);
+console.log(`✅ Script di gestione main caricato`);
 
-// ========== NAVBAR DINAMICA ==========
+// ================== NAVBAR DINAMICA ==================
 const navbar = document.querySelector("#navbar");
 const links = document.querySelectorAll(".nav-link");
 const logoNavbar = document.querySelector("#logoNavbar");
 const spadaLaser = document.querySelector("#spadalaser");
 const collapse = document.querySelector("#collapse");
 
+// Cambia tema della navbar in base allo scroll o alla dark mode
 function updateNavbarTheme(scrolled) {
   if (scrolled > 0 || document.body.classList.contains("dark")) {
     navbar.classList.replace("bg-black", "bg-yellow");
@@ -25,23 +26,25 @@ function updateNavbarTheme(scrolled) {
   }
 }
 
+// Aggiorna tema navbar su scroll
 window.addEventListener("scroll", () => {
   updateNavbarTheme(window.scrollY);
 });
 
-// ========== ROTAZIONE SPADA ==========
+// ================== ROTAZIONE SPADA NAVBAR ==================
 let check = false;
 spadaLaser.addEventListener("click", () => {
   check = !check;
   spadaLaser.style.transform = check ? "rotate(-90deg)" : "rotate(0deg)";
 });
 
-// ========== NUMERI INCREMENTALI ==========
+// ================== NUMERI INCREMENTALI ==================
 const firstNumber = document.querySelector("#firstNumber");
 const secondNumber = document.querySelector("#secondNumber");
 const thirdNumber = document.querySelector("#thirdNumber");
 let confirm = true;
 
+// Funzione per animare numeri fino a N
 function createInterval(n, element, time) {
   let counter = 0;
   const interval = setInterval(() => {
@@ -54,6 +57,7 @@ function createInterval(n, element, time) {
   }, time);
 }
 
+// Attiva l'incremento solo quando la sezione entra in viewport
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting && confirm) {
@@ -69,7 +73,7 @@ observer.observe(firstNumber);
 observer.observe(secondNumber);
 observer.observe(thirdNumber);
 
-// ========== SWIPER RECENSIONI ==========
+// ================== SWIPER RECENSIONI DINAMICHE ==================
 const rewiews = [
   { name: "Mario Rossi", rating: 5 },
   { name: "Luca Bianchi", rating: 4 },
@@ -78,6 +82,7 @@ const rewiews = [
   { name: "Elena Neri", rating: 1 },
 ];
 
+// Genera testo della recensione in base al punteggio
 function getReviewText(rating) {
   switch (rating) {
     case 5:
@@ -95,6 +100,7 @@ function getReviewText(rating) {
 
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 
+// Crea le slide per ogni recensione
 rewiews.forEach((recensione) => {
   const div = document.createElement("div");
   div.classList.add("swiper-slide", "fade-in");
@@ -115,6 +121,7 @@ rewiews.forEach((recensione) => {
   swiperWrapper.appendChild(div);
 });
 
+// Inizializza Swiper
 new Swiper(".swiper", {
   effect: "coverflow",
   grabCursor: true,
@@ -136,14 +143,16 @@ new Swiper(".swiper", {
   scrollbar: { el: ".swiper-scrollbar" },
 });
 
-// ========== DARK MODE TOGGLE ==========
+// ================== DARK MODE TOGGLE ==================
 const darkModeToggle = document.getElementById("darkModeToggle");
 
+// Imposta dark mode se presente in localStorage
 if (localStorage.getItem("dark-mode") === "enabled") {
   document.body.classList.add("dark");
   updateNavbarTheme(1);
 }
 
+// Attiva/disattiva dark mode
 darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   updateNavbarTheme(window.scrollY);
@@ -154,7 +163,7 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
-// ========== TORNA SU ==========
+// ================== TORNA SU ==================
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
@@ -165,7 +174,7 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// ========== VALIDAZIONE FORM ==========
+// ================== VALIDAZIONE FORM ==================
 const contactForm = document.getElementById("contactForm");
 
 contactForm?.addEventListener("submit", (e) => {

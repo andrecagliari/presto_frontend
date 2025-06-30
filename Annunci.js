@@ -1,5 +1,6 @@
-console.log(`Script di gestione annunci caricato`);
+console.log("✅ Script Annunci caricato");
 
+// ================== CARICAMENTO DATI ==================
 fetch('./annunci.json')
   .then(response => response.json())
   .then(data => {
@@ -10,9 +11,10 @@ fetch('./annunci.json')
     const inputMax = document.getElementById("maxPrice");
     const inputSearch = document.getElementById("searchKey");
 
+    // ================== CATEGORIE UNICHE ==================
     const categorie = [...new Set(data.map(a => a.categoria).filter(Boolean))];
 
-    // Radio dinamici per categoria
+    // ================== CREAZIONE RADIO DINAMICI ==================
     function radioCreate() {
       const divAll = document.createElement("div");
       divAll.classList.add("form-check");
@@ -25,7 +27,6 @@ fetch('./annunci.json')
       categorie.forEach((categoria, index) => {
         const div = document.createElement("div");
         div.classList.add("form-check");
-
         div.innerHTML = `
           <input class="form-check-input" type="radio" name="categorie" id="radio${index}" value="${categoria}">
           <label class="form-check-label" for="radio${index}">${categoria}</label>
@@ -34,7 +35,7 @@ fetch('./annunci.json')
       });
     }
 
-    // Mostra tutte le card filtrate
+    // ================== MOSTRA ANNUNCI FILTRATI ==================
     function mostraAnnunciFiltrati() {
       const categoriaSelezionata = document.querySelector("input[name='categorie']:checked")?.value;
       const min = parseFloat(inputMin.value) || 0;
@@ -54,7 +55,7 @@ fetch('./annunci.json')
       generaCard(risultati);
     }
 
-    // Crea card con tutte le recensioni visibili a toggle
+    // ================== GENERA CARD ==================
     function generaCard(array) {
       cardContainer.innerHTML = "";
 
@@ -103,7 +104,7 @@ fetch('./annunci.json')
         cardContainer.appendChild(card);
       });
 
-      // Aggiungi event listener per toggle recensioni
+      // ================== TOGGLE RECENSIONI ==================
       const toggleButtons = cardContainer.querySelectorAll(".toggle-recensioni");
       toggleButtons.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -119,13 +120,13 @@ fetch('./annunci.json')
       });
     }
 
-    // Media stelle
+    // ================== CALCOLA MEDIA RECENSIONI ==================
     function calcolaMedia(recensioni) {
       const somma = recensioni.reduce((acc, el) => acc + el.stelle, 0);
       return Math.round(somma / recensioni.length);
     }
 
-    // Stelle HTML
+    // ================== GENERA STELLE ==================
     function generaStelle(n) {
       return Array.from({ length: 5 }, (_, i) =>
         i < n
@@ -134,11 +135,24 @@ fetch('./annunci.json')
       ).join("");
     }
 
-    // Avvio
+    // ================== AVVIO ==================
     radioCreate();
     mostraAnnunciFiltrati();
 
-    // Eventi di filtro
+    // ================== EVENTI FILTRO ==================
     document.addEventListener("input", mostraAnnunciFiltrati);
     document.addEventListener("change", mostraAnnunciFiltrati);
   });
+
+// ================== TORNA SU ==================
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (backToTop) {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  }
+});
+
+backToTop?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
