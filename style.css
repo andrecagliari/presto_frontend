@@ -1,6 +1,6 @@
-/* =======================
-        VARIABILI
-======================= */
+/* File 5: style.css */
+/* Versione finale con animazione fade-in, dark mode compatibile ovunque, ottimizzazioni responsive */
+
 :root {
   --yellow: rgb(255, 232, 31);
   --black: rgb(23, 23, 23);
@@ -9,27 +9,16 @@
   --gray-dark: #111;
 }
 
-/* =======================
-        BASE
-======================= */
 * {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4,
-.h1,
-.h2,
-.h3,
-.h4 {
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   font-family: "Orbitron", sans-serif;
 }
 
-/* Sfondo generale */
 body {
   background-color: var(--black);
   color: var(--yellow);
@@ -42,47 +31,24 @@ body {
   transition: background 0.5s, color 0.5s;
 }
 
-html,
-body {
+html, body {
   height: 100%;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      transparent,
-      rgba(0, 0, 0, 0.5)
-    ),
-    url("./media/iperspazio.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5)), url("./media/iperspazio.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* =======================
-        CLASSI COLORI
-======================= */
-.bg-yellow {
-  background-color: var(--yellow);
-}
-.bg-black {
-  background-color: var(--black);
-}
-.bg-red {
-  background-color: var(--red);
-}
+/* COLORI */
+.bg-yellow { background-color: var(--yellow); }
+.bg-black { background-color: var(--black); }
+.bg-red { background-color: var(--red); }
+.text-yellow { color: var(--yellow); }
+.text-black { color: var(--black); }
+.text-red { color: var(--red); }
 
-.text-yellow {
-  color: var(--yellow);
-}
-.text-black {
-  color: var(--black);
-}
-.text-red {
-  color: var(--red);
-}
-
-/* =======================
-        NAVBAR
-======================= */
+/* NAVBAR */
 .navbar {
   height: 140px;
   transition: background-color 0.4s ease, height 0.4s ease;
@@ -102,7 +68,11 @@ body {
   outline: none;
 }
 
-/* Logo */
+.nav-link.active {
+  color: var(--yellow) !important;
+  font-weight: 700;
+}
+
 .logo {
   width: 50px;
 }
@@ -112,9 +82,7 @@ body {
   transition: transform 0.5s ease;
 }
 
-/* =======================
-        BOTTONI
-======================= */
+/* BOTTONI */
 .btn-custom {
   color: var(--yellow);
   background-color: var(--black);
@@ -124,8 +92,7 @@ body {
   transition: all 0.5s ease;
 }
 
-.btn-custom:hover,
-.btn-custom:focus {
+.btn-custom:hover, .btn-custom:focus {
   color: var(--black);
   background-color: var(--yellow);
   box-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
@@ -133,13 +100,8 @@ body {
   outline: none;
 }
 
-/* =======================
-        SEZIONI E CARD
-======================= */
-.positioned {
-  position: relative;
-  top: -150px;
-}
+/* CARD SEZIONI */
+.positioned { position: relative; top: -150px; }
 
 .col-custom {
   padding: 20px;
@@ -159,17 +121,13 @@ body {
   box-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
 }
 
-/* =======================
-      NUMERI
-======================= */
+/* NUMERI */
 .numeri {
   font-size: 2.5rem;
   font-weight: 900;
 }
 
-/* =======================
-      IMG WRAPPER
-======================= */
+/* IMG WRAPPER */
 .img-wrapper {
   display: inline-block;
   border-radius: 20px;
@@ -183,7 +141,7 @@ body {
 
 .img-wrapper:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
 }
 
 .img-wrapper img {
@@ -194,9 +152,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* =======================
-      SWIPER
-======================= */
+/* SWIPER */
 .swiper {
   position: relative;
   background: rgba(0, 0, 0, 0.5);
@@ -234,20 +190,19 @@ body {
   text-align: center;
   box-shadow: 0 0 20px rgba(255, 232, 31, 0.4);
   transition: 0.4s ease;
-  color: var(--white); /* colore principale in modalità chiara */
+  color: var(--white);
   overflow: hidden;
 }
-/* Overlay scuro sopra l'immagine */
+
 .card-review::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* intensità regolabile */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   z-index: 0;
 }
 
-/* Contenuti della card sopra l'overlay */
 .card-review > * {
   position: relative;
   z-index: 1;
@@ -255,64 +210,94 @@ body {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.card-review i {
-  color: var(--white);
-}
+.card-review i { color: var(--white); }
 
-/* DARK MODE */
-body.dark .card-review > * {
-  color: var(--yellow);
-}
-
-body.dark .card-review i {
-  color: var(--yellow);
-}
-
+body.dark .card-review > * { color: var(--yellow); }
+body.dark .card-review i { color: var(--yellow); }
 .card-review:hover {
   transform: scale(1.03);
   box-shadow: 0 0 30px rgba(255, 232, 31, 0.5);
 }
 
-/* =======================
-    FORM CONTATTI
-======================= */
-form input,
-form textarea {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid var(--yellow);
-  color: var(--yellow);
+/* ANIMAZIONE FADE-IN */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenitore form stile card galattica */
+.form-container {
+  background-color: var(--yellow);
+  color: var(--black);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.form-container:hover {
+  background-color: var(--black);
+  color: var(--red);
+  box-shadow: 0 0 30px rgba(235, 33, 46, 0.7);
+  transform: scale(1.03);
+}
+
+/* Titolo form */
+.form-container h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: inherit;
+  text-shadow: 0 0 7px rgba(235, 33, 46, 0.8);
+}
+
+/* Input e textarea */
+.form-container form input,
+.form-container form textarea {
+  background-color: rgba(255, 255, 255, 0.9); /* CHIARO per leggibilità */
+  border: 2px solid var(--black);
+  color: var(--black);
   border-radius: 10px;
   padding: 10px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-form input:focus,
-form textarea:focus {
+.form-container form input:focus,
+.form-container form textarea:focus {
   outline: none;
   border-color: var(--red);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(235, 33, 46, 0.1);
+  color: var(--red);
 }
 
-/* =======================
-        FOOTER
-======================= */
-footer {
-  font-size: 0.9rem;
+/* Mantieni input leggibili anche in hover sul container */
+.form-container:hover form input,
+.form-container:hover form textarea {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--black);
 }
 
+/* Bottone */
+.form-container .btn-custom {
+  width: 100%;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer { font-size: 0.9rem; }
 footer a {
   color: var(--yellow);
   transition: 0.3s ease;
 }
-
 footer a:hover {
   color: var(--white);
   text-shadow: 0 0 5px var(--red);
 }
 
-/* =======================
-  DARK MODE TOGGLE
-======================= */
+/* DARK MODE TOGGLE */
 #darkModeToggle {
   position: fixed;
   top: 20px;
@@ -333,9 +318,7 @@ footer a:hover {
   color: var(--black);
 }
 
-/* =======================
-    BACK TO TOP
-======================= */
+/* BACK TO TOP */
 #backToTop {
   position: fixed;
   bottom: 25px;
@@ -353,32 +336,18 @@ footer a:hover {
   transition: all 0.3s ease;
 }
 
-#backToTop:hover {
-  transform: scale(1.1);
-}
+#backToTop:hover { transform: scale(1.1); }
 
-/* =======================
-      RESPONSIVE
-======================= */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
-  .navbar {
-    height: auto;
-  }
-
-  .positioned {
-    position: static;
-  }
-
-  .btn-custom {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+  .navbar { height: auto; }
+  .positioned { position: static; }
+  .btn-custom { padding: 10px 20px; font-size: 0.9rem; }
+  .card-review { padding: 20px; }
+  .swiper { padding: 30px 0; }
 }
 
-/* =======================
-      PAGINA ANNUNCI
-======================= */
-
+/* PAGINA ANNUNCI */
 .accordion-item,
 .accordion-button {
   background-color: var(--black);
@@ -396,4 +365,81 @@ footer a:hover {
 
 .accordion-button:focus {
   box-shadow: 0 0 10px var(--red);
+}
+
+body.dark .accordion-item,
+body.dark .accordion-button {
+  background-color: var(--gray-dark);
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+body.dark .accordion-button:not(.collapsed) {
+  background-color: var(--red);
+  color: var(--black);
+}
+
+/* Sticky filtro a sinistra per pagina annunci */
+.col-md-3 {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+/* Scrollbar personalizzata per filtri */
+.col-md-3::-webkit-scrollbar {
+  width: 8px;
+}
+
+.col-md-3::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 4px;
+}
+
+/* Team cards - sezione Chi Siamo */
+.team-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  background-color: var(--yellow);
+  color: var(--black);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 232, 31, 0.7);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Header text adjustments per Chi Siamo */
+header.header p.lead {
+  font-size: 1.25rem;
+  color: var(--yellow);
+}
+
+/* Responsive tweaks per Chi Siamo */
+@media screen and (max-width: 768px) {
+  header.header {
+    height: auto;
+    padding: 4rem 1rem 2rem;
+  }
+
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
 }

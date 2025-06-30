@@ -3,86 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Presto.it - Annunci spaziali con stile galattico. Unisciti alla forza!"
-    />
+    <meta name="description" content="Presto.it - Annunci spaziali con stile galattico. Unisciti alla forza!" />
+    <meta name="author" content="Andrea Caocci" />
+    <meta name="robots" content="index, follow" />
     <title>Presto.it</title>
+    <link rel="icon" href="./media/favicon.ico" type="image/x-icon" />
 
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Orbitron:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Bottone Dark Mode -->
     <button id="darkModeToggle" aria-label="Attiva/disattiva modalità scura">
       <i class="fa-solid fa-moon"></i>
     </button>
-
-    <!-- Bottone Torna su -->
     <button id="backToTop" aria-label="Torna su">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-md bg-black fixed-top">
       <div id="collapse" class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img
-            id="logoNavbar"
-            src="./media/LogoSWgiallo.png"
-            alt="Logo Presto.it"
-            class="logo"
-          />
+          <img id="logoNavbar" src="./media/LogoSWgiallo.png" alt="Logo Presto.it" class="logo" />
         </a>
-        <img
-          id="spadalaser"
-          src="./media/spadanavbarOriz-giallo.png"
-          alt="Menu mobile"
-          class="img-fluid logo2 d-md-none"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        />
+        <img id="spadalaser" src="./media/spadanavbarOriz-giallo.png" alt="Menu mobile" class="img-fluid logo2 d-md-none" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" />
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Annunci.html">Annunci</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Annunci.html">Annunci</a></li>
+            <li class="nav-item"><a class="nav-link" href="./chisiamo.html">Chi siamo</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header
-      class="container-fluid header vh-100 d-flex align-items-center justify-content-center text-center"
-    >
+    <header class="container-fluid header vh-100 d-flex align-items-center justify-content-center text-center">
       <div>
         <h1 class="text-yellow display-1">Presto.it</h1>
         <div class="d-flex justify-content-center gap-3 mt-4">
@@ -92,60 +54,42 @@
       </div>
     </header>
 
-    <!-- Sezione Icone -->
     <section class="container positioned py-5">
       <div class="row justify-content-center g-4">
         <div class="col-10 col-md-4 bg-yellow text-center p-4 col-custom">
-          <i class="fa-brands fa-jedi-order fa-3x mb-3"></i>
+          <i class="fa-brands fa-jedi-order fa-3x mb-3" aria-hidden="true"></i>
           <h3>Ordine Jedi</h3>
           <p class="lead">Unisciti ai maestri della forza galattica.</p>
         </div>
         <div class="col-10 col-md-4 bg-yellow text-center p-4 col-custom">
-          <i class="fa-brands fa-galactic-senate fa-3x mb-3"></i>
+          <i class="fa-brands fa-galactic-senate fa-3x mb-3" aria-hidden="true"></i>
           <h3>Senato Galattico</h3>
           <p class="lead">Rappresenta il tuo sistema solare al meglio.</p>
         </div>
         <div class="col-10 col-md-4 bg-yellow text-center p-4 col-custom">
-          <i class="fa-brands fa-galactic-republic fa-3x mb-3"></i>
+          <i class="fa-brands fa-galactic-republic fa-3x mb-3" aria-hidden="true"></i>
           <h3>Repubblica Galattica</h3>
-          <p class="lead">
-            Annuncia il tuo ritorno alla ribalta interplanetaria.
-          </p>
+          <p class="lead">Annuncia il tuo ritorno alla ribalta interplanetaria.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sezione Numeri -->
     <section class="container py-5">
       <div class="row align-items-center g-4">
         <div class="col-12 col-md-6">
           <div class="img-wrapper">
-            <img
-              src="./media/DarthMaul.jpeg"
-              alt="Darth Maul Star Wars"
-              class="img-fluid"
-            />
+            <img src="./media/DarthMaul.jpeg" alt="Darth Maul Star Wars" class="img-fluid" />
           </div>
         </div>
         <div class="col-12 col-md-6 text-md-end text-center">
           <h2 class="mb-4">Un po' di numeri</h2>
-          <p>
-            <span class="numeri text-yellow" id="firstNumber">0</span> annunci
-            pubblicati
-          </p>
-          <p>
-            <span class="numeri text-yellow" id="secondNumber">0</span> utenti
-            registrati
-          </p>
-          <p>
-            <span class="numeri text-yellow" id="thirdNumber">0</span> annunci
-            attivi
-          </p>
+          <p><span class="numeri text-yellow" id="firstNumber">0</span> annunci pubblicati</p>
+          <p><span class="numeri text-yellow" id="secondNumber">0</span> utenti registrati</p>
+          <p><span class="numeri text-yellow" id="thirdNumber">0</span> annunci attivi</p>
         </div>
       </div>
     </section>
 
-    <!-- Sezione Recensioni -->
     <section class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
@@ -158,57 +102,40 @@
       </div>
     </section>
 
-    <!-- Modulo Contatti -->
-    <section class="container py-5" id="contatti">
+<section class="container py-5" id="contatti">
+  <div class="row justify-content-start">
+    <div class="col-md-5 form-container">
       <h2 class="text-center mb-4">Contattaci</h2>
       <form id="contactForm" novalidate>
         <div class="row g-3">
-          <div class="col-md-6">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Nome"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Email"
-              required
-            />
+          <div class="col-12">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required />
           </div>
           <div class="col-12">
-            <textarea
-              class="form-control"
-              placeholder="Messaggio"
-              rows="5"
-              required
-            ></textarea>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" id="message" name="message" placeholder="Messaggio" rows="5" required></textarea>
           </div>
           <div class="col-12 text-center">
             <button type="submit" class="btn btn-custom">Invia</button>
           </div>
         </div>
       </form>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
+
+
+
     <footer class="bg-black text-yellow py-4 text-center">
-      <img
-        src="./media/LogoSWgiallo.png"
-        alt="Logo footer"
-        width="40"
-        class="mb-2"
-      />
+      <img src="./media/LogoSWgiallo.png" alt="Logo footer" width="40" class="mb-2" />
       <p>© 2025 Presto.it - Tutti i diritti riservati</p>
       <div>
-        <a href="#" class="text-yellow me-3"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="text-yellow me-3"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="#" class="text-yellow"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-yellow me-3"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" class="text-yellow me-3"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" class="text-yellow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
       </div>
     </footer>
 

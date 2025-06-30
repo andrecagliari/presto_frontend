@@ -5,10 +5,12 @@
     "categoria": "Elettronica",
     "prezzo": 120,
     "descrizione": "Smartphone compatto con buona autonomia e prestazioni per l’uso quotidiano.",
-    "img": "./img/huawei-x5.webp",
+    "img": "./media/huawei-x5.webp",
     "recensioni": [
       { "utente": "Alessio", "stelle": 4, "testo": "Buon rapporto qualità/prezzo." },
-      { "utente": "Federica", "stelle": 5, "testo": "Perfetto per mia madre, semplice da usare." }
+      { "utente": "Federica", "stelle": 5, "testo": "Perfetto per mia madre, semplice da usare." },
+      { "utente": "Giorgio", "stelle": 3, "testo": "Un po’ lento con molte app aperte." },
+      { "utente": "Elisa", "stelle": 4, "testo": "Fotocamera discreta, batteria ottima." }
     ],
     "type": "sell"
   },
@@ -18,12 +20,14 @@
     "categoria": "Motori",
     "prezzo": 2000,
     "descrizione": "Citycar iconica, ottima per muoversi in città con stile e consumi ridotti.",
-    "img": "./img/fiat-500.webp",
+    "img": "./media/fiat-500.webp",
     "recensioni": [
       { "utente": "Giulia", "stelle": 5, "testo": "Comoda e maneggevole." },
-      { "utente": "Luigi", "stelle": 4, "testo": "Ottima per neopatentati." }
+      { "utente": "Luigi", "stelle": 4, "testo": "Ottima per neopatentati." },
+      { "utente": "Angela", "stelle": 3, "testo": "Spazio interno limitato." },
+      { "utente": "Piero", "stelle": 4, "testo": "Consumi ridotti e facile da parcheggiare." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 3,
@@ -31,361 +35,417 @@
     "categoria": "Sport",
     "prezzo": 20,
     "descrizione": "Mazza da baseball in alluminio, ideale per principianti ed esperti.",
-    "img": "./img/mazza da baseball.webp",
+    "img": "./media/mazza da baseball.webp",
     "recensioni": [
       { "utente": "Franco", "stelle": 4, "testo": "Robusta e ben bilanciata." },
-      { "utente": "Stefano", "stelle": 3, "testo": "Buona per il prezzo." }
+      { "utente": "Stefano", "stelle": 3, "testo": "Buona per il prezzo." },
+      { "utente": "Mirko", "stelle": 2, "testo": "Un po’ leggera per uso intenso." },
+      { "utente": "Laura", "stelle": 4, "testo": "Perfetta per allenamenti amatoriali." }
     ],
     "type": "sell"
   },
   {
     "id": 4,
-    "titolo": "Bilocale",
-    "categoria": "Immobili",
-    "prezzo": 30000,
-    "descrizione": "Appartamento bilocale ideale per giovani coppie o investimento.",
-    "img": "./img/bilocale.jpg",
-    "recensioni": [
-      { "utente": "Roberta", "stelle": 5, "testo": "Zona tranquilla e ben servita." },
-      { "utente": "Mauro", "stelle": 4, "testo": "Buon prezzo, da ristrutturare." }
-    ],
-    "type": "search"
-  },
-  {
-    "id": 5,
-    "titolo": "Felpa usata",
+    "titolo": "Felpa Usata",
     "categoria": "Abbigliamento",
     "prezzo": 10,
     "descrizione": "Felpa comoda e calda, in buone condizioni.",
-    "img": "./img/felpausata.jpg",
+    "img": "./media/felpausata.jpg",
     "recensioni": [
       { "utente": "Chiara", "stelle": 3, "testo": "Taglia un po’ piccola." },
-      { "utente": "Luca", "stelle": 4, "testo": "Tessuto morbido." }
+      { "utente": "Luca", "stelle": 4, "testo": "Tessuto morbido." },
+      { "utente": "Marco", "stelle": 2, "testo": "Colori leggermente scoloriti." },
+      { "utente": "Vanessa", "stelle": 4, "testo": "Buona per l’inverno." }
+    ],
+    "type": "sell"
+  },
+  {
+    "id": 5,
+    "titolo": "Divano Due Posti",
+    "categoria": "Arredamento",
+    "prezzo": 400,
+    "descrizione": "Divano a due posti, stile moderno, rivestimento sfoderabile.",
+    "img": "./media/divanodueposti.webp",
+    "recensioni": [
+      { "utente": "Gianni", "stelle": 5, "testo": "Molto comodo e facile da pulire." },
+      { "utente": "Sonia", "stelle": 4, "testo": "Colore bello e resistente." },
+      { "utente": "Lidia", "stelle": 3, "testo": "Non molto ampio." },
+      { "utente": "Fabio", "stelle": 5, "testo": "Perfetto per il mio soggiorno!" }
     ],
     "type": "sell"
   },
   {
     "id": 6,
-    "titolo": "Divani due posti",
-    "categoria": "Arredamento",
-    "prezzo": 400,
-    "descrizione": "Divano a due posti, stile moderno, rivestimento sfoderabile.",
-    "img": "./img/divanodueposti.webp",
-    "recensioni": [
-      { "utente": "Gianni", "stelle": 5, "testo": "Molto comodo e facile da pulire." },
-      { "utente": "Sonia", "stelle": 4, "testo": "Colore bello e resistente." }
-    ],
-    "type": "search"
-  },
-  {
-    "id": 7,
-    "titolo": "Pala",
+    "titolo": "Pala da Giardino",
     "categoria": "Giardinaggio",
     "prezzo": 30,
     "descrizione": "Pala in metallo per giardino, ideale per lavori di scavo o terra.",
-    "img": "./img/palametallo.webp",
+    "img": "./media/palametallo.webp",
     "recensioni": [
       { "utente": "Bruno", "stelle": 5, "testo": "Solida e utile per orto." },
-      { "utente": "Giuliano", "stelle": 4, "testo": "Impugnatura comoda." }
+      { "utente": "Giuliano", "stelle": 4, "testo": "Impugnatura comoda." },
+      { "utente": "Clara", "stelle": 3, "testo": "Pesa un po’ troppo." },
+      { "utente": "Nico", "stelle": 4, "testo": "Materiale resistente." }
+    ],
+    "type": "sell"
+  },
+  {
+    "id": 7,
+    "titolo": "Master of Pupo",
+    "categoria": "Musica",
+    "prezzo": 15,
+    "descrizione": "Raccolta dei grandi successi di Pupo in edizione speciale.",
+    "img": "./media/pupo.jpg",
+    "recensioni": [
+      { "utente": "Valentina", "stelle": 5, "testo": "Imperdibile per i fan!" },
+      { "utente": "Lucio", "stelle": 4, "testo": "Ottimo audio." },
+      { "utente": "Manuela", "stelle": 3, "testo": "Manca qualche brano famoso." },
+      { "utente": "Gabriele", "stelle": 5, "testo": "Mi ha fatto tornare indietro nel tempo!" }
     ],
     "type": "sell"
   },
   {
     "id": 8,
-    "titolo": "Master of Pupo",
-    "categoria": "Musica",
-    "prezzo": 15,
-    "descrizione": "Raccolta dei grandi successi di Pupo in edizione speciale.",
-    "img": "./img/pupo.jpg",
+    "titolo": "TV Samsung 32”",
+    "categoria": "Elettronica",
+    "prezzo": 230,
+    "descrizione": "TV LED 32” Samsung con HDMI e porta USB. Qualità eccellente.",
+    "img": "./media/tvled32.webp",
     "recensioni": [
-      { "utente": "Valentina", "stelle": 5, "testo": "Imperdibile per i fan!" },
-      { "utente": "Lucio", "stelle": 4, "testo": "Ottimo audio." }
+      { "utente": "Sabrina", "stelle": 4, "testo": "Buona qualità video." },
+      { "utente": "Paolo", "stelle": 5, "testo": "Ottimo affare." },
+      { "utente": "Nicola", "stelle": 3, "testo": "Audio un po’ basso." },
+      { "utente": "Rita", "stelle": 5, "testo": "Immagini nitide e colori brillanti!" }
     ],
     "type": "sell"
   },
   {
     "id": 9,
-    "titolo": "TV Samsung",
-    "categoria": "Elettronica",
-    "prezzo": 230,
-    "descrizione": "TV LED 32” Samsung con HDMI e porta USB. Qualità eccellente.",
-    "img": "./img/tvled32.webp",
+    "titolo": "Ford Puma",
+    "categoria": "Motori",
+    "prezzo": 25000,
+    "descrizione": "SUV compatto e sportivo, perfetto per la guida urbana.",
+    "img": "./media/fordpuma.jpg",
     "recensioni": [
-      { "utente": "Sabrina", "stelle": 4, "testo": "Buona qualità video." },
-      { "utente": "Paolo", "stelle": 5, "testo": "Ottimo affare." }
+      { "utente": "Stefania", "stelle": 5, "testo": "Design accattivante e interni comodi." },
+      { "utente": "Matteo", "stelle": 4, "testo": "Consumi contenuti." },
+      { "utente": "Daniela", "stelle": 3, "testo": "Prezzo un po’ alto." },
+      { "utente": "Mauro", "stelle": 4, "testo": "Guida fluida e stabile." }
     ],
     "type": "sell"
   },
   {
     "id": 10,
-    "titolo": "Ford Puma",
-    "categoria": "Motori",
-    "prezzo": 25000,
-    "descrizione": "SUV compatto e sportivo, perfetto per la guida urbana.",
-    "img": "./img/fordpuma.jpg",
+    "titolo": "Sciarpa scolorita",
+    "categoria": "Abbigliamento",
+    "prezzo": 5,
+    "descrizione": "Sciarpa in lana scolorita, ideale per chi ama il vintage.",
+    "img": "./media/sciarpa.webp",
     "recensioni": [
-      { "utente": "Stefania", "stelle": 5, "testo": "Design accattivante e interni comodi." },
-      { "utente": "Matteo", "stelle": 4, "testo": "Consumi contenuti." }
+      { "utente": "Angela", "stelle": 2, "testo": "Colore slavato ma calda." },
+      { "utente": "Martino", "stelle": 3, "testo": "Originale e leggera." },
+      { "utente": "Elisa", "stelle": 2, "testo": "Si sfilaccia facilmente." },
+      { "utente": "Marco", "stelle": 3, "testo": "Prezzo basso, ma usura evidente." }
     ],
     "type": "sell"
   },
   {
     "id": 11,
-    "titolo": "Pallone da calcio",
-    "categoria": "Sport",
-    "prezzo": 30,
-    "descrizione": "Pallone professionale cucito a mano, ideale per allenamenti o partite.",
-    "img": "./img/pallonecalcio.webp",
+    "titolo": "Lampada scandinava",
+    "categoria": "Arredamento",
+    "prezzo": 70,
+    "descrizione": "Lampada da tavolo in stile scandinavo con paralume in lino.",
+    "img": "./media/lampadascandinava.webp",
     "recensioni": [
-      { "utente": "Mario", "stelle": 4, "testo": "Buona tenuta del gonfiaggio." },
-      { "utente": "Gigi", "stelle": 3, "testo": "Materiale resistente." }
+      { "utente": "Lucia", "stelle": 4, "testo": "Design semplice e elegante." },
+      { "utente": "Oscar", "stelle": 5, "testo": "Perfetta per la scrivania." },
+      { "utente": "Marta", "stelle": 4, "testo": "Illuminazione soffusa perfetta." },
+      { "utente": "Samuele", "stelle": 5, "testo": "Stile nordico top." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 12,
-    "titolo": "Trilocale",
-    "categoria": "Immobili",
-    "prezzo": 55000,
-    "descrizione": "Trilocale con ampio balcone e garage incluso, zona servita.",
-    "img": "./img/trilocale.jpg",
+    "titolo": "Concime Universale",
+    "categoria": "Giardinaggio",
+    "prezzo": 8,
+    "descrizione": "Concime organico universale per piante da interno ed esterno.",
+    "img": "./media/concime.jpg",
     "recensioni": [
-      { "utente": "Rita", "stelle": 5, "testo": "Spazioso e luminoso." },
-      { "utente": "Toni", "stelle": 4, "testo": "Ottima posizione." }
+      { "utente": "Lino", "stelle": 5, "testo": "Ottimi risultati in poco tempo." },
+      { "utente": "Maria", "stelle": 4, "testo": "Le mie piante ringraziano." },
+      { "utente": "Diego", "stelle": 4, "testo": "Molto efficace." },
+      { "utente": "Giovanna", "stelle": 5, "testo": "Facile da usare e profumo gradevole." }
     ],
     "type": "sell"
   },
   {
     "id": 13,
-    "titolo": "Sciarpa scolorita",
-    "categoria": "Abbigliamento",
-    "prezzo": 5,
-    "descrizione": "Sciarpa in lana scolorita, ideale per chi ama il vintage.",
-    "img": "./img/sciarpa.webp",
+    "titolo": "Basso Elettrico",
+    "categoria": "Musica",
+    "prezzo": 300,
+    "descrizione": "Basso elettrico a 4 corde, ideale per principianti e studenti.",
+    "img": "./media/bassonuovo.webp",
     "recensioni": [
-      { "utente": "Angela", "stelle": 2, "testo": "Colore slavato ma calda." },
-      { "utente": "Martino", "stelle": 3, "testo": "Originale e leggera." }
+      { "utente": "Tommaso", "stelle": 4, "testo": "Buon suono e prezzo corretto." },
+      { "utente": "Bea", "stelle": 5, "testo": "Regalo perfetto per mio figlio." },
+      { "utente": "Gigi", "stelle": 3, "testo": "Manico un po’ grosso." },
+      { "utente": "Arianna", "stelle": 5, "testo": "Perfetto per iniziare." }
     ],
     "type": "sell"
   },
   {
     "id": 14,
-    "titolo": "Lampada",
-    "categoria": "Arredamento",
-    "prezzo": 70,
-    "descrizione": "Lampada da tavolo in stile scandinavo con paralume in lino.",
-    "img": "./img/lampadascandinava.webp",
+    "titolo": "Cuffie Sony",
+    "categoria": "Elettronica",
+    "prezzo": 120,
+    "descrizione": "Cuffie con cancellazione attiva del rumore e suono bilanciato.",
+    "img": "./media/cuffiesony.webp",
     "recensioni": [
-      { "utente": "Lucia", "stelle": 4, "testo": "Design semplice e elegante." },
-      { "utente": "Oscar", "stelle": 5, "testo": "Perfetta per la scrivania." }
+      { "utente": "Elena", "stelle": 5, "testo": "Qualità eccellente." },
+      { "utente": "Rudy", "stelle": 4, "testo": "Isolamento acustico perfetto." },
+      { "utente": "Laura", "stelle": 3, "testo": "Un po’ strette." },
+      { "utente": "Franco", "stelle": 4, "testo": "Bassi potenti e chiari." }
     ],
     "type": "sell"
   },
   {
     "id": 15,
-    "titolo": "Concime",
-    "categoria": "Giardinaggio",
-    "prezzo": 8,
-    "descrizione": "Concime organico universale per piante da interno ed esterno.",
-    "img": "./img/concime.jpg",
+    "titolo": "Ducati Monster",
+    "categoria": "Motori",
+    "prezzo": 12000,
+    "descrizione": "Moto sportiva Ducati Monster, perfetta per chi ama la guida dinamica.",
+    "img": "./media/ducatimonster.jpg",
     "recensioni": [
-      { "utente": "Lino", "stelle": 5, "testo": "Ottimi risultati in poco tempo." },
-      { "utente": "Maria", "stelle": 4, "testo": "Le mie piante ringraziano." }
+      { "utente": "Rocco", "stelle": 5, "testo": "Emozione pura!" },
+      { "utente": "Gianni", "stelle": 5, "testo": "Il rombo è una sinfonia." },
+      { "utente": "Ester", "stelle": 4, "testo": "Esteticamente bellissima." },
+      { "utente": "Leonardo", "stelle": 4, "testo": "Reattiva e potente." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 16,
-    "titolo": "Basso nuovo",
-    "categoria": "Musica",
-    "prezzo": 300,
-    "descrizione": "Basso elettrico a 4 corde, ideale per principianti e studenti.",
-    "img": "./img/bassonuovo.webp",
+    "titolo": "Guanti invernali",
+    "categoria": "Abbigliamento",
+    "prezzo": 22,
+    "descrizione": "Guanti in pile con interno termico e touch per smartphone.",
+    "img": "./media/guantipile.jpg",
     "recensioni": [
-      { "utente": "Tommaso", "stelle": 4, "testo": "Buon suono e prezzo corretto." },
-      { "utente": "Bea", "stelle": 5, "testo": "Regalo perfetto per mio figlio." }
+      { "utente": "Silvia", "stelle": 5, "testo": "Morbidissimi e caldi." },
+      { "utente": "Manuel", "stelle": 4, "testo": "Funziona bene il touch." },
+      { "utente": "Stefano", "stelle": 3, "testo": "Si bagnano facilmente con la pioggia." },
+      { "utente": "Irene", "stelle": 4, "testo": "Ottimi per l'inverno." }
     ],
     "type": "sell"
   },
   {
     "id": 17,
-    "titolo": "Cuffie Sony",
-    "categoria": "Elettronica",
-    "prezzo": 120,
-    "descrizione": "Cuffie con cancellazione attiva del rumore e suono bilanciato.",
-    "img": "./img/cuffiesony.webp",
+    "titolo": "Scrivania in vetro",
+    "categoria": "Arredamento",
+    "prezzo": 600,
+    "descrizione": "Scrivania elegante con piano in vetro temperato e struttura in metallo.",
+    "img": "./media/scrivaniavetro.webp",
     "recensioni": [
-      { "utente": "Elena", "stelle": 5, "testo": "Qualità eccellente." },
-      { "utente": "Rudy", "stelle": 4, "testo": "Isolamento acustico perfetto." }
+      { "utente": "Veronica", "stelle": 4, "testo": "Minimal e spaziosa." },
+      { "utente": "Claudio", "stelle": 5, "testo": "Solida e di design." },
+      { "utente": "Luca", "stelle": 3, "testo": "Montaggio un po' complesso." },
+      { "utente": "Tania", "stelle": 4, "testo": "Bella ma ingombrante." }
     ],
     "type": "sell"
   },
   {
     "id": 18,
-    "titolo": "Ducati Monster",
-    "categoria": "Motori",
-    "prezzo": 12000,
-    "descrizione": "Moto sportiva Ducati Monster, perfetta per chi ama la guida dinamica.",
-    "img": "./img/ducatimonster.jpg",
+    "titolo": "Secchio da giardino",
+    "categoria": "Giardinaggio",
+    "prezzo": 30,
+    "descrizione": "Secchio da giardino con manico rinforzato, capacità 10 litri.",
+    "img": "./media/secchiogiardino.jpg",
     "recensioni": [
-      { "utente": "Rocco", "stelle": 5, "testo": "Emozione pura!" },
-      { "utente": "Gianni", "stelle": 5, "testo": "Il rombo è una sinfonia." }
+      { "utente": "Luca", "stelle": 3, "testo": "Fa il suo dovere." },
+      { "utente": "Mirko", "stelle": 4, "testo": "Plastica resistente." },
+      { "utente": "Davide", "stelle": 2, "testo": "Il manico sembra fragile." },
+      { "utente": "Beatrice", "stelle": 3, "testo": "Normale, nulla di speciale." }
     ],
     "type": "sell"
   },
   {
     "id": 19,
-    "titolo": "Pattini",
-    "categoria": "Sport",
-    "prezzo": 90,
-    "descrizione": "Pattini in linea professionali con cuscinetti ABEC-7.",
-    "img": "./img/pattinilinea.webp",
+    "titolo": "Compilation Pupo",
+    "categoria": "Musica",
+    "prezzo": 9,
+    "descrizione": "Raccolta inedita dei brani più amati di Pupo.",
+    "img": "./media/pupocompilation.jpg",
     "recensioni": [
-      { "utente": "Irene", "stelle": 4, "testo": "Scorrono bene, ottimo grip." },
-      { "utente": "Giada", "stelle": 3, "testo": "Un po’ rigidi ma validi." }
+      { "utente": "Franca", "stelle": 5, "testo": "Sempre emozionante." },
+      { "utente": "Salvo", "stelle": 4, "testo": "Ottima qualità audio." },
+      { "utente": "Danilo", "stelle": 3, "testo": "Manca qualche hit famosa." },
+      { "utente": "Marzia", "stelle": 4, "testo": "Nostalgia pura." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 20,
-    "titolo": "Guanti invernali",
-    "categoria": "Abbigliamento",
-    "prezzo": 22,
-    "descrizione": "Guanti in pile con interno termico e touch per smartphone.",
-    "img": "./img/guantipile.jpg",
+    "titolo": "Auricolari Sennheiser",
+    "categoria": "Elettronica",
+    "prezzo": 120,
+    "descrizione": "Auricolari in-ear Sennheiser con audio ad alta definizione.",
+    "img": "./media/auricolarisenn.webp",
     "recensioni": [
-      { "utente": "Silvia", "stelle": 5, "testo": "Morbidissimi e caldi." },
-      { "utente": "Manuel", "stelle": 4, "testo": "Funziona bene il touch." }
+      { "utente": "Giulia", "stelle": 5, "testo": "Audio pulito e potente." },
+      { "utente": "Stefano", "stelle": 5, "testo": "Comodissimi da indossare." },
+      { "utente": "Lorenzo", "stelle": 4, "testo": "Perfetti per la palestra." },
+      { "utente": "Martina", "stelle": 3, "testo": "Cavo un po’ corto." }
     ],
     "type": "sell"
   },
   {
     "id": 21,
-    "titolo": "Scrivania in vetro",
-    "categoria": "Arredamento",
-    "prezzo": 600,
-    "descrizione": "Scrivania elegante con piano in vetro temperato e struttura in metallo.",
-    "img": "./img/scrivaniavetro.webp",
+    "titolo": "Fiat 300",
+    "categoria": "Motori",
+    "prezzo": 2560,
+    "descrizione": "Auto compatta ideale per la città, motore affidabile.",
+    "img": "./media/trattore.jpg",
     "recensioni": [
-      { "utente": "Veronica", "stelle": 4, "testo": "Minimal e spaziosa." },
-      { "utente": "Claudio", "stelle": 5, "testo": "Solida e di design." }
+      { "utente": "Simona", "stelle": 4, "testo": "Pratica e parsimoniosa." },
+      { "utente": "Leo", "stelle": 3, "testo": "Vecchiotta ma funziona." },
+      { "utente": "Gianluca", "stelle": 2, "testo": "Esteticamente datata." },
+      { "utente": "Tiziana", "stelle": 4, "testo": "Ottima in città." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 22,
-    "titolo": "Secchio",
-    "categoria": "Giardinaggio",
-    "prezzo": 30,
-    "descrizione": "Secchio da giardino con manico rinforzato, capacità 10 litri.",
-    "img": "./img/secchiogiardino.jpg",
+    "titolo": "Set mazze da golf",
+    "categoria": "Sport",
+    "prezzo": 4320,
+    "descrizione": "Set completo per golfisti con sacca, ferri e driver.",
+    "img": "./media/mazzegolf.webp",
     "recensioni": [
-      { "utente": "Luca", "stelle": 3, "testo": "Fa il suo dovere." },
-      { "utente": "Mirko", "stelle": 4, "testo": "Plastica resistente." }
+      { "utente": "Nicola", "stelle": 5, "testo": "Perfetto per tornei amatoriali." },
+      { "utente": "Luciano", "stelle": 4, "testo": "Buon bilanciamento." },
+      { "utente": "Fabiana", "stelle": 3, "testo": "Prezzo elevato." },
+      { "utente": "Andrea", "stelle": 5, "testo": "Attrezzatura professionale." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 23,
-    "titolo": "Compilation Pupo",
-    "categoria": "Musica",
-    "prezzo": 9,
-    "descrizione": "Raccolta inedita dei brani più amati di Pupo.",
-    "img": "./img/pupocompilation.jpg",
+    "titolo": "Posto auto",
+    "categoria": "Immobili",
+    "prezzo": 2200,
+    "descrizione": "Posto auto scoperto in cortile recintato, zona centrale.",
+    "img": "./media/postoauto.jpg",
     "recensioni": [
-      { "utente": "Franca", "stelle": 5, "testo": "Sempre emozionante." },
-      { "utente": "Salvo", "stelle": 4, "testo": "Ottima qualità audio." }
+      { "utente": "Silvia", "stelle": 5, "testo": "Comodo e sicuro." },
+      { "utente": "Vito", "stelle": 4, "testo": "Prezzo corretto." },
+      { "utente": "Luisa", "stelle": 3, "testo": "Spazio un po' stretto." },
+      { "utente": "Michele", "stelle": 4, "testo": "Zona tranquilla." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 24,
-    "titolo": "Auricolari Sennheiser",
-    "categoria": "Elettronica",
-    "prezzo": 120,
-    "descrizione": "Auricolari in-ear Sennheiser con audio ad alta definizione.",
-    "img": "./img/auricolarisenn.webp",
+    "titolo": "Zaino Decathlon",
+    "categoria": "Abbigliamento",
+    "prezzo": 55,
+    "descrizione": "Zaino sportivo Decathlon con scomparti multipli e schienale imbottito.",
+    "img": "./media/zainodeca.webp",
     "recensioni": [
-      { "utente": "Giulia", "stelle": 5, "testo": "Audio pulito e potente." },
-      { "utente": "Stefano", "stelle": 5, "testo": "Comodissimi da indossare." }
+      { "utente": "Laura", "stelle": 5, "testo": "Comodissimo per escursioni." },
+      { "utente": "Enrico", "stelle": 4, "testo": "Buona capienza." },
+      { "utente": "Luigi", "stelle": 4, "testo": "Ottima traspirazione." },
+      { "utente": "Marta", "stelle": 3, "testo": "Cerniere un po’ fragili." }
     ],
     "type": "sell"
   },
   {
     "id": 25,
-    "titolo": "Fiat 300",
-    "categoria": "Motori",
-    "prezzo": 2560,
-    "descrizione": "Auto compatta ideale per la città, motore affidabile.",
-    "img": "./img/trattore.jpg",
+    "titolo": "Comodino in legno",
+    "categoria": "Arredamento",
+    "prezzo": 210,
+    "descrizione": "Comodino in legno massello con cassetto e ripiano aperto.",
+    "img": "./media/comodino.webp",
     "recensioni": [
-      { "utente": "Simona", "stelle": 4, "testo": "Pratica e parsimoniosa." },
-      { "utente": "Leo", "stelle": 3, "testo": "Vecchiotta ma funziona." }
+      { "utente": "Rossana", "stelle": 4, "testo": "Solido e ben rifinito." },
+      { "utente": "Mimmo", "stelle": 5, "testo": "Perfetto accanto al letto." },
+      { "utente": "Giorgia", "stelle": 4, "testo": "Materiali di qualità." },
+      { "utente": "Dario", "stelle": 3, "testo": "Legno un po' scuro rispetto alla foto." }
     ],
     "type": "sell"
   },
   {
     "id": 26,
-    "titolo": "Set mazze da golf",
-    "categoria": "Sport",
-    "prezzo": 4320,
-    "descrizione": "Set completo per golfisti con sacca, ferri e driver.",
-    "img": "./img/mazzegolf.webp",
+    "titolo": "Rastrello",
+    "categoria": "Giardinaggio",
+    "prezzo": 5,
+    "descrizione": "Rastrello in acciaio con manico in legno, largo 30cm.",
+    "img": "./media/rastrello.jpg",
     "recensioni": [
-      { "utente": "Nicola", "stelle": 5, "testo": "Perfetto per tornei amatoriali." },
-      { "utente": "Luciano", "stelle": 4, "testo": "Buon bilanciamento." }
+      { "utente": "Edoardo", "stelle": 3, "testo": "Sufficiente per il prato." },
+      { "utente": "Ivana", "stelle": 4, "testo": "Pratico e leggero." },
+      { "utente": "Luca", "stelle": 2, "testo": "Poco resistente al terreno duro." },
+      { "utente": "Annalisa", "stelle": 4, "testo": "Ottimo per le foglie secche." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 27,
-    "titolo": "Posto auto",
-    "categoria": "Immobili",
-    "prezzo": 2200,
-    "descrizione": "Posto auto scoperto in cortile recintato, zona centrale.",
-    "img": "./img/postoauto.jpg",
+    "titolo": "Pattini in linea",
+    "categoria": "Sport",
+    "prezzo": 90,
+    "descrizione": "Pattini in linea professionali con cuscinetti ABEC-7.",
+    "img": "./media/pattinilinea.webp",
     "recensioni": [
-      { "utente": "Silvia", "stelle": 5, "testo": "Comodo e sicuro." },
-      { "utente": "Vito", "stelle": 4, "testo": "Prezzo corretto." }
+      { "utente": "Irene", "stelle": 4, "testo": "Scorrono bene, ottimo grip." },
+      { "utente": "Giada", "stelle": 3, "testo": "Un po’ rigidi ma validi." },
+      { "utente": "Luca", "stelle": 5, "testo": "Perfetti per lo skate park." },
+      { "utente": "Samira", "stelle": 3, "testo": "Stringono alla caviglia." }
     ],
-    "type": "search"
+    "type": "sell"
   },
   {
     "id": 28,
-    "titolo": "Zaino Decathlon",
-    "categoria": "Abbigliamento",
-    "prezzo": 55,
-    "descrizione": "Zaino sportivo Decathlon con scomparti multipli e schienale imbottito.",
-    "img": "./img/zainodeca.webp",
+    "titolo": "Bilocale",
+    "categoria": "Immobili",
+    "prezzo": 30000,
+    "descrizione": "Appartamento bilocale ideale per giovani coppie o investimento.",
+    "img": "./media/bilocale.jpg",
     "recensioni": [
-      { "utente": "Laura", "stelle": 5, "testo": "Comodissimo per escursioni." },
-      { "utente": "Enrico", "stelle": 4, "testo": "Buona capienza." }
+      { "utente": "Roberta", "stelle": 5, "testo": "Zona tranquilla e ben servita." },
+      { "utente": "Mauro", "stelle": 4, "testo": "Buon prezzo, da ristrutturare." },
+      { "utente": "Fabio", "stelle": 3, "testo": "Spazi interni limitati." },
+      { "utente": "Paola", "stelle": 4, "testo": "Ottimo come primo acquisto." }
     ],
     "type": "sell"
   },
   {
     "id": 29,
-    "titolo": "Comodino",
-    "categoria": "Arredamento",
-    "prezzo": 210,
-    "descrizione": "Comodino in legno massello con cassetto e ripiano aperto.",
-    "img": "./img/comodino.webp",
+    "titolo": "Trilocale",
+    "categoria": "Immobili",
+    "prezzo": 55000,
+    "descrizione": "Trilocale con ampio balcone e garage incluso, zona servita.",
+    "img": "./media/trilocale.jpg",
     "recensioni": [
-      { "utente": "Rossana", "stelle": 4, "testo": "Solido e ben rifinito." },
-      { "utente": "Mimmo", "stelle": 5, "testo": "Perfetto accanto al letto." }
+      { "utente": "Rita", "stelle": 5, "testo": "Spazioso e luminoso." },
+      { "utente": "Toni", "stelle": 4, "testo": "Ottima posizione." },
+      { "utente": "Silvano", "stelle": 3, "testo": "Bagno da ristrutturare." },
+      { "utente": "Lina", "stelle": 5, "testo": "Ottima occasione!" }
     ],
     "type": "sell"
   },
   {
     "id": 30,
-    "titolo": "Rastrello",
-    "categoria": "Giardinaggio",
-    "prezzo": 5,
-    "descrizione": "Rastrello in acciaio con manico in legno, largo 30cm.",
-    "img": "./img/rastrello.jpg",
+    "titolo": "Pallone da calcio",
+    "categoria": "Sport",
+    "prezzo": 30,
+    "descrizione": "Pallone professionale cucito a mano, ideale per allenamenti o partite.",
+    "img": "./media/pallonecalcio.webp",
     "recensioni": [
-      { "utente": "Edoardo", "stelle": 3, "testo": "Sufficiente per il prato." },
-      { "utente": "Ivana", "stelle": 4, "testo": "Pratico e leggero." }
+      { "utente": "Mario", "stelle": 4, "testo": "Buona tenuta del gonfiaggio." },
+      { "utente": "Gigi", "stelle": 3, "testo": "Materiale resistente." },
+      { "utente": "Riccardo", "stelle": 5, "testo": "Perfetto per il campetto." },
+      { "utente": "Davide", "stelle": 2, "testo": "Si consuma in fretta sull’asfalto." }
     ],
     "type": "sell"
   }

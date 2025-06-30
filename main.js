@@ -7,10 +7,8 @@ const logoNavbar = document.querySelector("#logoNavbar");
 const spadaLaser = document.querySelector("#spadalaser");
 const collapse = document.querySelector("#collapse");
 
-window.addEventListener("scroll", () => {
-  let scrolled = window.scrollY;
-
-  if (scrolled > 0) {
+function updateNavbarTheme(scrolled) {
+  if (scrolled > 0 || document.body.classList.contains("dark")) {
     navbar.classList.replace("bg-black", "bg-yellow");
     collapse.classList.replace("bg-black", "bg-yellow");
     navbar.style.height = "70px";
@@ -25,6 +23,10 @@ window.addEventListener("scroll", () => {
     logoNavbar.src = "./media/LogoSWgiallo.png";
     spadaLaser.src = "./media/spadanavbarOriz-giallo.png";
   }
+}
+
+window.addEventListener("scroll", () => {
+  updateNavbarTheme(window.scrollY);
 });
 
 // ========== ROTAZIONE SPADA ==========
@@ -95,15 +97,13 @@ const swiperWrapper = document.querySelector(".swiper-wrapper");
 
 rewiews.forEach((recensione) => {
   const div = document.createElement("div");
-  div.classList.add("swiper-slide");
+  div.classList.add("swiper-slide", "fade-in");
 
-  let stelle = "";
-  for (let i = 1; i <= 5; i++) {
-    stelle +=
-      i <= recensione.rating
-        ? '<i class="fa-solid fa-star"></i>'
-        : '<i class="fa-regular fa-star"></i>';
-  }
+  const stelle = Array.from({ length: 5 }, (_, i) =>
+    i < recensione.rating
+      ? '<i class="fa-solid fa-star"></i>'
+      : '<i class="fa-regular fa-star"></i>'
+  ).join("");
 
   div.innerHTML = `
     <div class="card-review">
@@ -141,10 +141,12 @@ const darkModeToggle = document.getElementById("darkModeToggle");
 
 if (localStorage.getItem("dark-mode") === "enabled") {
   document.body.classList.add("dark");
+  updateNavbarTheme(1);
 }
 
 darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+  updateNavbarTheme(window.scrollY);
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("dark-mode", "enabled");
   } else {
@@ -166,7 +168,7 @@ backToTop.addEventListener("click", () => {
 // ========== VALIDAZIONE FORM ==========
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", (e) => {
+contactForm?.addEventListener("submit", (e) => {
   e.preventDefault();
   const inputs = contactForm.querySelectorAll("input, textarea");
   let valid = true;

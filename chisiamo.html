@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chi Siamo - Presto.it</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-md bg-black fixed-top">
+    <div id="collapse" class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img id="logoNavbar" src="./media/LogoSWgiallo.png" alt="Logo Presto.it" class="logo" />
+      </a>
+      <img
+        id="spadalaser"
+        src="./media/spadanavbarOriz-giallo.png"
+        class="img-fluid logo2 d-md-none"
+        alt="Menu mobile"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      />
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./Annunci.html">Annunci</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./chisiamo.html">Chi siamo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="container-fluid header vh-50 d-flex align-items-center justify-content-center text-center pt-5" style="padding-top: 140px;">
+    <div>
+      <h1 class="text-yellow display-3">Chi Siamo</h1>
+      <p class="lead text-white">La forza galattica dietro Presto.it</p>
+    </div>
+  </header>
+
+  <!-- Sezione Contenuto -->
+  <main class="container py-5">
+    <section class="row g-5 align-items-center">
+      <article class="col-md-6">
+        <img src="./media/team.png" alt="Team Presto.it in azione" class="img-fluid rounded shadow-lg" />
+      </article>
+      <article class="col-md-6 text-yellow">
+        <h2 class="mb-4">La nostra missione</h2>
+        <p>
+          Presto.it è il portale leader negli annunci spaziali con stile galattico. Il nostro
+          obiettivo è connettere ogni pianeta, sistema e galassia con annunci affidabili e
+          innovativi.
+        </p>
+        <p>
+          Il nostro team di esperti Jedi, ingegneri ribelli e navigatori stellari lavora ogni giorno
+          per offrirti un'esperienza utente impeccabile e interstellare.
+        </p>
+        <p>
+          La nostra forza è la passione per la tecnologia, l'innovazione e la voglia di superare ogni
+          limite conosciuto.
+        </p>
+      </article>
+    </section>
+
+    <section class="row mt-5">
+      <h2 class="text-yellow mb-4 text-center">Il nostro team</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Card Membro 1 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="team-card p-4 bg-yellow rounded text-black shadow-lg text-center">
+            <img src="./media/jedi.webp" alt="Andrea Caocci" class="rounded-circle mb-3 team-img" />
+            <h4>Andrea Caocci</h4>
+            <p class="mb-1 fst-italic">Fondatore & Jedi Master</p>
+            <p>Leader visionario e maestro della forza digitale, guida la nostra flotta con passione e saggezza.</p>
+          </div>
+        </div>
+        <!-- Card Membro 2 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="team-card p-4 bg-yellow rounded text-black shadow-lg text-center">
+            <img src="./media/ribelle.avif" alt="Sveva" class="rounded-circle mb-3 team-img" />
+            <h4>Sveva</h4>
+            <p class="mb-1 fst-italic">Responsabile UX & Ribelle</p>
+            <p>Esperta in design e navigazione stellare, assicura un'interfaccia pulita e funzionale per ogni esploratore.</p>
+          </div>
+        </div>
+        <!-- Card Membro 3 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="team-card p-4 bg-yellow rounded text-black shadow-lg text-center">
+            <img src="./media/barman.webp" alt="Tommy" class="rounded-circle mb-3 team-img" />
+            <h4>Tommy</h4>
+            <p class="mb-1 fst-italic">Barman & Coordinatore</p>
+            <p>Con un mix di carisma e organizzazione, tiene unito il team e serve le migliori idee della galassia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-yellow py-4 text-center">
+    <img src="./media/LogoSWgiallo.png" alt="Logo footer" width="40" class="mb-2" />
+    <p>© 2025 Presto.it - Tutti i diritti riservati</p>
+    <div>
+      <a href="#" class="text-yellow me-3"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-yellow me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-yellow"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./chisiamo.js"></script>
+</body>
+</html>
